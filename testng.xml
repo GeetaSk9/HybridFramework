@@ -8,18 +8,21 @@
 	</listeners>
 
 	<test name="CreateNewAccountTest">
+	<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.qa.opencart.tests.CreateNewAccountTest" />
 
 		</classes>
 	</test> <!-- Test -->
 	<test name="LoginTest">
+	<parameter name="browser" value="edge"/>
 		<classes>
 			<class name="com.qa.opencart.tests.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="SearchResultTestPage">
+	<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.qa.opencart.tests.SearchResultTestPage" />
 		</classes>
