@@ -25,6 +25,7 @@ public class DriverFactory {
 	public WebDriver driver;
 	public Properties prop;
 	public OptionsManager optionsManager;
+	public static String highlight;
 
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
@@ -35,6 +36,8 @@ public class DriverFactory {
 		System.out.println("browser name is " + browserName);
 
 		optionsManager = new OptionsManager(prop);
+		
+		highlight = prop.getProperty("highlight");
 
 		if (browserName.equals("chrome")) {
 

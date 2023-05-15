@@ -26,8 +26,8 @@ public class LoginPage {
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
-		// eleUtils = new ElementsUtils(driver);
+		//PageFactory.initElements(driver, this);
+		 eleUtils = new ElementsUtils(driver);
 	}
 
 	public String getLoginPageTitle() {
@@ -94,6 +94,13 @@ public class LoginPage {
 		this.password.sendKeys(pwd);
 		Thread.sleep(5000);
 		this.signIn.click();
+		
+//		eleUtils.doClick(userName);
+//		eleUtils.doSendKeys(userName, un);
+//		eleUtils.doClick(continueBtn);
+//		eleUtils.doClick(password);
+//		eleUtils.doSendKeys(password,pwd);
+//		eleUtils.doClick(signIn);
 		return new SearchResultPage(driver);
 	}
 
